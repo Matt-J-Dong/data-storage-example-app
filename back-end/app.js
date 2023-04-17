@@ -34,11 +34,11 @@ app.use(cors({ origin: process.env.FRONT_END_DOMAIN, credentials: true })) // al
 // a route that sends a response including the Set-Cookie header.
 app.get("/set-cookie", (req, res) => {
   res
-    .cookie("foo", "bar") // send a cookie in the response with the key 'foo' and value 'bar'
+    .cookie("anna", "money") // send a cookie in the response with the key 'foo' and value 'bar'
     .send({
       success: true,
       message: "Sent a cookie to the browser... hopefully it saved it.",
-    })
+    });
 })
 
 // a route that looks for a Cookie header in the request and sends back whatever data was found in it.
